@@ -1,0 +1,136 @@
+{
+    "info": {
+      "name": "UserManagementAPI",
+      "_postman_id": "12345678-1234-1234-1234-123456789012",
+      "description": "Collection to test UserManagementAPI routes",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get All Users",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:5148/api",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5148",
+            "path": [
+              "api"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Get User by ID",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:5148/api/1",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5148",
+            "path": [
+              "api",
+              "1"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Add New User",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"New User\",\n    \"email\": \"new.user@example.com\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:5148/api",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5148",
+            "path": [
+              "api"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Update User",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"Updated User\",\n    \"email\": \"updated.user@example.com\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:5148/api/1",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5148",
+            "path": [
+              "api",
+              "1"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Delete User",
+        "request": {
+          "method": "DELETE",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:5148/api/1",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5148",
+            "path": [
+              "api",
+              "1"
+            ]
+          }
+        }
+      }
+    ]
+  }

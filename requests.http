@@ -1,0 +1,29 @@
+### Test GET route
+GET http://localhost:5148/api
+Accept: application/json
+
+### Test GET by ID route
+GET http://localhost:5148/api/1
+Accept: application/json
+
+### Test POST route
+POST http://localhost:5148/api/
+Content-Type: application/json
+
+{
+    "name": "New User",
+    "email": "new.user@example.com"
+}
+
+### Test PUT route
+PUT http://localhost:5148/api/1
+Content-Type: application/json
+
+{
+    "name": "Updated User",
+    "email": "updated.user@example.com"
+}
+
+### Test DELETE route
+DELETE http://localhost:5148/api/
+Accept: application/json
