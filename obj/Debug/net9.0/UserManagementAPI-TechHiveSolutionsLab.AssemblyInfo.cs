@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UserManagementAPI-TechHiveSolutionsLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92ee2b3e6f006d8ef84db90973235a11acadc836")]
 [assembly: System.Reflection.AssemblyProductAttribute("UserManagementAPI-TechHiveSolutionsLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UserManagementAPI-TechHiveSolutionsLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

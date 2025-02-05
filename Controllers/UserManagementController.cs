@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,12 +18,14 @@ namespace UserManagementAPI_TechHiveSolutionsLab.Controllers
         };
 
         [HttpGet]
+        [Authorize]
         public ActionResult<IEnumerable<User>> GetUsers()
         {
             return Ok(Users);
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public ActionResult<User> GetUser(int id)
         {
             var user = Users.FirstOrDefault(u => u.Id == id);
@@ -34,6 +37,7 @@ namespace UserManagementAPI_TechHiveSolutionsLab.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult<User> AddUser(User newUser)
         {
             if (newUser == null || string.IsNullOrWhiteSpace(newUser.Name) || !IsValidEmail(newUser.Email))
@@ -53,6 +57,7 @@ namespace UserManagementAPI_TechHiveSolutionsLab.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public ActionResult UpdateUser(int id, User updatedUser)
         {
             var user = Users.FirstOrDefault(u => u.Id == id);
@@ -68,6 +73,7 @@ namespace UserManagementAPI_TechHiveSolutionsLab.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public ActionResult DeleteUser(int id)
         {
             var user = Users.FirstOrDefault(u => u.Id == id);
